@@ -63,6 +63,7 @@ ul li {
     font-weight: 400;
     color: #cfd9e0;
     padding: 0 15px;
+    transition: 0.9s ease all;
 }
 
 .menu li:hover a {
