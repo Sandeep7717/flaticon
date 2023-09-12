@@ -63,7 +63,7 @@
                             <a href="#">Pricing</a>
                         </li>
                         <li>
-                            <a href="#">S</a>
+                            <a class="man" href="#">S</a>
                         </li>
                     </ul>
                 </div>
@@ -386,7 +386,149 @@
 
         </div>
     </div>
+    <div id="background">
+        <div id="container">
+            <span id="header">Login</span>
+            <br>
+            <br>
+            <input type="input" id="user" placeholder="Username" class="input">
+            <br>
+            <br>
+            <input type="password" id="pass" placeholder="Password" class="input">
+            <br>
+            <br>
+            <button onclick="check()" id="button" class="enterbtn">Continue</button>
+            <br>
+            <br>
+            <br>
+            <span id="status"></span>
+            <div id="buttons">
+                <button onclick="showStuff()" id="show_button" class="btn-one">Show Password</button>
+                <button onclick="reset()" id="enter_button" class="btn-one">Reset</button>
+            </div>
+        </div>
+        <div id="page">
+            <button id="bckbtn" onclick="back()">arrow_back</button>
+            <br>
+            <span id="pagetxt">Congrats, you've logged in!</span>
+            <br>
+            <br>
+            <span id="pagebody">This is where the site would normaly take you to a diffrent webpage. But as far as im
+                concerned you can't do that in CodePen, so enjoy this instead.</span>
+        </div>
+    </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript">
+        let status = document.getElementById("status");
+        let contents = document.getElementById("pass");
+        let usercontents = document.getElementById("user");
+        var l = 0;
+        var show = true;
+        var show_button = document.getElementById("show_button");
+        var background = document.getElementById("background");
+        var mockPage = document.getElementById("page");
+
+        console.clear();
+
+        //window.onload = () => {};
+
+        const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
+
+        async function check() {
+            if (contents.value === "1234" && usercontents.value === "user1234") {
+                console.log("correct!");
+                status.innerHTML = "Correct!";
+                status.style.color = "var(--green)";
+                l = 0;
+                openPage();
+            } else {
+                console.log(contents.value + " is incorrect");
+                l++;
+                status.innerHTML = "Incorrect Password or Username!";
+                status.style.color = "var(--red)";
+                screenShake();
+                lock();
+                waitOnPress();
+            }
+        }
+
+        function lock() {
+            if (l > 2) {
+                console.log("too many incorrect attempts!");
+                document.getElementById("button").disabled = true;
+                document.getElementById("button").style.color = "white";
+                status.innerHTML = "Too many attempts! Try again later.";
+            }
+        }
+
+        contents.onkeydown = function (e) {
+            // If enter key pressed then enter input
+            if (e.keyCode == 13 && l < 3) {
+                check();
+            }
+        };
+
+        async function reset() {
+            console.clear();
+            console.log("login attempts reset, try again :)");
+            l = 0;
+            status.innerHTML = "";
+            document.getElementById("button").disabled = false;
+            document.getElementById("button").style.color = "white";
+            await sleep(1000);
+            console.clear();
+        }
+
+        function showStuff() {
+            if (show) {
+                contents.type = "input";
+                show_button.innerHTML = "Hide Password";
+                show = false;
+            } else {
+                contents.type = "password";
+                show_button.innerHTML = "Show Password";
+                show = true;
+            }
+        }
+
+        async function screenShake() {
+            container.style.animation = "wiggle 0.5s ease-in-out";
+            await sleep(500);
+            container.style.animation = "";
+        }
+
+        async function waitOnPress() {
+            if (l < 3) {
+                document.getElementById("button").disabled = true;
+                await sleep(500);
+                document.getElementById("button").disabled = false;
+            } else {
+                document.getElementById("button").disabled = true;
+            }
+        }
+
+        function openPage() {
+            mockPage.style.display = "block";
+        }
+
+        async function back() {
+            mockPage.style.animation = "slideout 1s ease-in-out";
+            await sleep(1000);
+            mockPage.style.display = "none";
+            mockPage.style.animation = "";
+        }
+        $('.man').click(function () {
+            $('#background').slideToggle();
+        })
+
+        $('.bell-icon').click(function () {
+            $('.Notifications-text').show();
+            $('.modal-sinup-overlay').show();
+            $('body').addClass('scroll')
+        })
+    </script>
 </body>
 
 </html>

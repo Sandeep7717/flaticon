@@ -479,3 +479,182 @@ ul li {
 .top-icon ul li img:hover {
     transform: scale(1.1);
 }
+
+
+
+
+
+
+
+
+
+
+
+#background {
+    display: none;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    position: alternate;
+    top: 10%;
+    bottom: 0;
+    right: 0;
+    /* display: flex; */
+    position: fixed;
+    overflow: hidden;
+}
+
+#container {
+    position: relative;
+    background-color: white;
+    height: 375px;
+    width: 375px;
+    border-radius: 15px;
+    padding: 2em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    overflow: hidden;
+}
+
+#buttons {
+    padding: 2em;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+#header {
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+.input {
+    background-color: #e0e0e0;
+    font-size: 15px;
+    width: 90%;
+    border: none;
+    padding: 1em;
+    border-radius: 20px;
+    /* box-shadow: 0px 0px 1px 1px var(--purple) inset; */
+    outline: none;
+}
+
+.btn-one {
+    background-color: white;
+    font-size: 15px;
+    border: none;
+    padding: 10px;
+    margin: 2px;
+    float: left;
+    cursor: pointer;
+    color: var(--purple);
+}
+
+#status {
+    font-size: 15px;
+    font-family: Inconsolata;
+    padding: 0.8em;
+}
+
+.enterbtn {
+    background-image: linear-gradient(to top left, var(--purple), var(--blue));
+    font-family: Inconsolata;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    margin: 2px;
+    color: white;
+    float: left;
+    cursor: pointer;
+}
+
+:root {
+    --purple: #e57dff;
+    --blue: #7d26ff;
+    --red: #f47373;
+    --green: #37d67a;
+}
+
+.man {
+    display: block;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: translate(0px);
+    }
+
+    25% {
+        transform: translate(10px);
+    }
+
+    60% {
+        transform: translate(-10px);
+    }
+
+    100% {
+        transform: translate(0px);
+    }
+}
+
+::placeholder {
+    color: #3d3d3d;
+}
+
+
+#page {
+    padding: 2em;
+    position: absolute;
+    width: 475px;
+    height: 475px;
+    display: none;
+    z-index: 1;
+    background: white;
+    border-radius: 10px;
+}
+
+#pagetxt {
+    font-family: Inconsolata;
+    font-size: 50px;
+    color: black;
+}
+
+#pagebody {
+    font-family: Inconsolata;
+    font-size: 20px;
+    color: black;
+}
+
+#bckbtn {
+    font-family: Material Icons;
+    color: black;
+    font-size: 80px;
+    background: none;
+    border-style: none;
+    cursor: pointer;
+    animation: point 1s infinite ease-in-out;
+}
+
+@keyframes point {
+    0% {
+        transform: translate(-5px);
+        color: grey;
+    }
+
+    50% {
+        transform: translate(-15px);
+    }
+
+    100% {
+        transform: translate(-5px);
+        color: grey;
+    }
+}
+
+@keyframes slideout {
+    to {
+        transform: translatey(100%);
+        opacity: 0;
+    }
+}
