@@ -1,0 +1,480 @@
+body {
+    font-size: 14px;
+    color: #0b2239;
+    font-family: sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+.container {
+    width: 1440px;
+    margin: auto;
+    padding: 10px 0;
+}
+
+.header {
+    background: #0b2239;
+}
+
+.logo {
+    width: 20%;
+}
+
+.logo img {
+    width: 100%;
+
+
+
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+
+}
+
+.menu {
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu li a {
+    font-weight: 400;
+    color: #cfd9e0;
+    padding: 0 15px;
+}
+
+.menu li:hover a {
+    color: #fff;
+}
+
+
+.right-wrapper img {
+    width: 30px;
+    vertical-align: middle;
+
+}
+
+
+.right-wrapper li:last-child a {
+    display: inline-block;
+    color: #fff;
+    background-color: #01579b;
+
+    height: 50px;
+    line-height: 3;
+    width: 50px;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 18px;
+}
+
+.right-wrapper li a {
+    font-weight: 400;
+    color: #cfd9e0;
+    padding: 0 15px;
+}
+
+.right-wrapper li:hover a {
+    color: #fff;
+}
+
+.right-wrapper li {
+    display: inline-block;
+}
+
+.card li img {
+    border-radius: 100px;
+    width: 120px;
+    border: 3px solid#5ad8a1;
+}
+
+.card h2 {
+    color: #37495c;
+    margin: 10px 0;
+}
+
+.card p {
+    color: #374957;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.card ul {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.container-one {
+    width: 1080px;
+    margin: auto;
+}
+
+.card li {
+    width: calc(25% - 60px);
+}
+
+.card {
+    margin: 100px 0;
+}
+
+.top-icon li img {
+    width: 100%;
+    margin-bottom: 50px;
+    padding: 10px;
+}
+
+.top-icon li {
+    border: 1px solid#cfd9e0;
+    width: 24%;
+    border-radius: 10px;
+
+
+}
+
+.top-icon li:hover {
+    border-color: #91a8b8;
+}
+
+.top {
+    color: #282a35;
+    font-size: 30px;
+    font-weight: normal;
+
+
+}
+
+.top-icon ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-icon li {
+    position: relative;
+}
+
+.top-icon h4 {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #5f7d95;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.top-icon h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #282a35;
+    font-size: 18px;
+
+}
+
+.see-more {
+    background: #f8fafb;
+    margin: 30px 0;
+    padding: 30px 0;
+}
+
+.see-more a {
+    background: #2bc48a;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.see-more a:hover {
+    background: #00af80;
+}
+
+.see-heading h2 {
+    color: #0b2239;
+    font-size: 30px;
+
+}
+
+.see-heading p {
+    color: #0b2239;
+    margin: 20px 0;
+    font-size: 15px;
+
+}
+
+.see-deatail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.elements img {
+    width: 100%;
+}
+
+.elements {
+    width: 50%;
+    margin-right: 100px;
+    vertical-align: middle;
+}
+
+.see-heading h2 {
+    width: 70%;
+}
+
+.see-heading p {
+    width: 52%;
+    line-height: 26px;
+}
+
+.see-heading {
+    padding-left: 50px;
+}
+
+.btn img {
+    vertical-align: middle;
+    width: 20%;
+    padding-left: 1px;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.btn a {
+    color: #00af80;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.btn a:hover {
+    background: #edfaf4;
+}
+
+.tools h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.tools p {
+
+    font-size: 18px;
+    text-align: center;
+    margin: 20px;
+}
+
+.gsuite img {
+    width: 50%;
+}
+
+.all-edit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.editor-text {
+    border-bottom: 1px solid#eff3f6;
+    margin: 30px 0;
+}
+
+.editor-text-two {
+    border-bottom: 1px solid#eff3f6;
+    margin: 30px 0;
+
+}
+
+.editor-text-three {
+    border-bottom: 1px solid#eff3f6;
+    margin: 30px 0;
+}
+
+.editor-text h2 {
+    color: #00af80;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.editor-text p {
+    width: 70%;
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 25px;
+    cursor: pointer;
+}
+
+.editor-text-two h2 {
+    color: #0b2239;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.editor-text-two p {
+    width: 70%;
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 25px;
+    cursor: pointer;
+}
+
+.editor-text-three h2 {
+    color: #0b2239;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.editor-text-three p {
+    width: 70%;
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 25px;
+    cursor: pointer;
+}
+
+.editor-text a {
+    color: #00af80;
+    font-size: 16px;
+    font-weight: 500
+}
+
+.editor-text a:hover {
+    text-decoration: underline;
+}
+
+.editor-text-two a {
+    color: #00af80;
+    font-size: 16px;
+    font-weight: 500
+}
+
+.editor-text-two a:hover {
+    text-decoration: underline;
+}
+
+.editor-text-three a {
+    color: #00af80;
+    font-size: 16px;
+    font-weight: 500
+}
+
+.editor-text-three a:hover {
+    text-decoration: underline;
+}
+
+.elements-two li img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.elements-two li {
+    background: #ffffff;
+    border-radius: 10px;
+    margin: 0 10px;
+    padding: 10px;
+    width: 255px;
+    height: 220px;
+    cursor: pointer;
+
+
+
+}
+
+.elements-two ul {
+    display: flex;
+    justify-content: center;
+
+}
+
+.elements-two h3 {
+    margin: 30px 0;
+}
+
+.elements-three img {
+    width: 80%;
+}
+
+.elements-three {
+    width: 50%;
+}
+
+.footer {
+    background: #0e2a47;
+}
+
+.all-pannel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.all-pannel li {
+    display: inline-block;
+
+}
+
+.all-pannel li a {
+    color: #fff;
+    padding: 0 10px;
+}
+
+.all-pannel li a:hover {
+    color: #bac8d3;
+}
+
+.left-pannel {
+    color: #bac8d3;
+}
+
+.container-one ul li a {
+    overflow: hidden;
+}
+
+.container-one ul li a img {
+    transition: 0.3s;
+}
+
+.container-one ul li a img:hover {
+    transform: scale(1.1);
+}
+
+.top-icon ul li {
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.top-icon ul li img {
+    transition: 0.3s;
+}
+
+.top-icon ul li img:hover {
+    transform: scale(1.1);
+}
